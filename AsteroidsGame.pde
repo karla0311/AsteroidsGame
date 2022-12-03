@@ -24,6 +24,7 @@ public void draw()
     float d = dist((float)liltimmy.getX(), (float)liltimmy.getY(), (float)rocks.get(i).getX(), (float)rocks.get(i).getY());
     if(d < 10){
       rocks.remove(i);
+      i--;
     }
   }
   liltimmy.show();
