@@ -1,6 +1,8 @@
 Star[] nightSky = new Star[200];
 Spaceship liltimmy = new Spaceship();
 ArrayList <Asteroid> rocks = new ArrayList <Asteroid>();
+ArrayList <Bullet> shot = new ArrayList <Bullet>();
+Bullet bull = new Bullet(liltimmy);
 
 public void setup() 
 {
@@ -27,6 +29,14 @@ public void draw()
       i--;
     }
   }
+  for(int i = 0; i < shot.size(); i++){
+    shot.get(i).show();
+    shot.get(i).move();
+    if((float)shot.get(i).getX() > 498 || (float)shot.get(i).getX() < 2 || (float)shot.get(i).getY() > 498 || (float)shot.get(i).getY() < 2 ){
+      shot.remove(i);
+      i--;
+    }
+  }
   liltimmy.show();
   liltimmy.move();
 
@@ -45,5 +55,7 @@ public void keyPressed(){
   if(key == 'w'){
     liltimmy.accelerate(1.0);
   }
+  if(key == ' '){
+    shot.add(new Bullet(liltimmy));
+  }
 }
-
