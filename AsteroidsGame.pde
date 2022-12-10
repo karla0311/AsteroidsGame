@@ -11,7 +11,7 @@ public void setup()
   for(int i = 0; i  < nightSky.length; i++){
     nightSky[i] = new Star();
   }
-  for(int i = 0; i  < 1; i++){
+  for(int i = 0; i  < 40; i++){
     rocks.add(new Asteroid());
   }
 }
