@@ -3,7 +3,7 @@ class Asteroid extends Floater
   private double rotSpeed;
   public Asteroid(){
     corners = 6;
-    xCorners = new int[]{-11,10,18,9,9,-13};
+    xCorners = new int[]{-10,10,18,9,9,-11};
     yCorners = new int[]{-13,-8,0,9,8,0};
     myColor = #9c9c9c;
     myCenterX = (int)(Math.random()*500);
